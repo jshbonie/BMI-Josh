@@ -16,5 +16,10 @@ namespace BMI_Josh
         {
             InitializeComponent();
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
