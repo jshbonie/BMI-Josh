@@ -30,6 +30,8 @@
         {
             this.MyHeightLabel = new System.Windows.Forms.Label();
             this.MyHeightTextBox = new System.Windows.Forms.TextBox();
+            this.MyWeightLabel = new System.Windows.Forms.Label();
+            this.MyWeightTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // MyHeightLabel
@@ -52,11 +54,32 @@
             this.MyHeightTextBox.TabIndex = 1;
             this.MyHeightTextBox.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
+            // MyWeightLabel
+            // 
+            this.MyWeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.MyWeightLabel.Location = new System.Drawing.Point(12, 85);
+            this.MyWeightLabel.Name = "MyWeightLabel";
+            this.MyWeightLabel.Size = new System.Drawing.Size(271, 28);
+            this.MyWeightLabel.TabIndex = 2;
+            this.MyWeightLabel.Text = "My Weight";
+            this.MyWeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // MyWeightTextBox
+            // 
+            this.MyWeightTextBox.AcceptsTab = true;
+            this.MyWeightTextBox.Location = new System.Drawing.Point(16, 116);
+            this.MyWeightTextBox.Multiline = true;
+            this.MyWeightTextBox.Name = "MyWeightTextBox";
+            this.MyWeightTextBox.Size = new System.Drawing.Size(274, 22);
+            this.MyWeightTextBox.TabIndex = 3;
+            // 
             // BMIform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 433);
+            this.Controls.Add(this.MyWeightTextBox);
+            this.Controls.Add(this.MyWeightLabel);
             this.Controls.Add(this.MyHeightTextBox);
             this.Controls.Add(this.MyHeightLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
@@ -77,6 +100,8 @@
 
         private System.Windows.Forms.Label MyHeightLabel;
         private System.Windows.Forms.TextBox MyHeightTextBox;
+        private System.Windows.Forms.Label MyWeightLabel;
+        private System.Windows.Forms.TextBox MyWeightTextBox;
     }
 }
 
