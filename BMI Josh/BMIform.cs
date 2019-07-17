@@ -21,5 +21,15 @@ namespace BMI_Josh
         {
 
         }
+
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
