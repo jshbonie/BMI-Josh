@@ -31,5 +31,10 @@ namespace BMI_Josh
         {
 
         }
+
+        private void MyHeightLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
