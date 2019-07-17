@@ -36,18 +36,18 @@
             this.MetricToggleButton = new System.Windows.Forms.RadioButton();
             this.CalculationResultText = new System.Windows.Forms.Label();
             this.ButtonsPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.SevenButton = new System.Windows.Forms.Button();
-            this.EightButton = new System.Windows.Forms.Button();
-            this.NineButton = new System.Windows.Forms.Button();
-            this.FourButton = new System.Windows.Forms.Button();
-            this.FiveButton = new System.Windows.Forms.Button();
-            this.SixButton = new System.Windows.Forms.Button();
-            this.OneButton = new System.Windows.Forms.Button();
-            this.TwoButton = new System.Windows.Forms.Button();
-            this.ThreeButton = new System.Windows.Forms.Button();
-            this.DeleteButton = new System.Windows.Forms.Button();
-            this.ZeroButton = new System.Windows.Forms.Button();
             this.PeriodButton = new System.Windows.Forms.Button();
+            this.ZeroButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.ThreeButton = new System.Windows.Forms.Button();
+            this.TwoButton = new System.Windows.Forms.Button();
+            this.OneButton = new System.Windows.Forms.Button();
+            this.SixButton = new System.Windows.Forms.Button();
+            this.FiveButton = new System.Windows.Forms.Button();
+            this.FourButton = new System.Windows.Forms.Button();
+            this.NineButton = new System.Windows.Forms.Button();
+            this.EightButton = new System.Windows.Forms.Button();
+            this.SevenButton = new System.Windows.Forms.Button();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.ButtonsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +71,7 @@
             this.MyHeightTextBox.Name = "MyHeightTextBox";
             this.MyHeightTextBox.Size = new System.Drawing.Size(274, 22);
             this.MyHeightTextBox.TabIndex = 1;
-            this.MyHeightTextBox.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.MyHeightTextBox.TextChanged += new System.EventHandler(this.MyHeightTextBox_TextChanged);
             // 
             // MyWeightLabel
             // 
@@ -91,6 +91,7 @@
             this.MyWeightTextBox.Name = "MyWeightTextBox";
             this.MyWeightTextBox.Size = new System.Drawing.Size(274, 22);
             this.MyWeightTextBox.TabIndex = 3;
+            this.MyWeightTextBox.TextChanged += new System.EventHandler(this.MyWeightTextBox_TextChanged);
             // 
             // ImperialRadioButton
             // 
@@ -103,6 +104,7 @@
             this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
             this.ImperialRadioButton.UseVisualStyleBackColor = true;
+            this.ImperialRadioButton.CheckedChanged += new System.EventHandler(this.ImperialRadioButton_CheckedChanged);
             // 
             // MetricToggleButton
             // 
@@ -115,7 +117,7 @@
             this.MetricToggleButton.TabStop = true;
             this.MetricToggleButton.Text = "Metric";
             this.MetricToggleButton.UseVisualStyleBackColor = true;
-            this.MetricToggleButton.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
+            this.MetricToggleButton.CheckedChanged += new System.EventHandler(this.MetricToggleButton_CheckedChanged);
             // 
             // CalculationResultText
             // 
@@ -154,128 +156,6 @@
             this.ButtonsPanel.Size = new System.Drawing.Size(260, 167);
             this.ButtonsPanel.TabIndex = 7;
             // 
-            // SevenButton
-            // 
-            this.SevenButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SevenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.SevenButton.Location = new System.Drawing.Point(3, 3);
-            this.SevenButton.Name = "SevenButton";
-            this.SevenButton.Size = new System.Drawing.Size(80, 35);
-            this.SevenButton.TabIndex = 0;
-            this.SevenButton.Text = "7";
-            this.SevenButton.UseVisualStyleBackColor = true;
-            // 
-            // EightButton
-            // 
-            this.EightButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.EightButton.Location = new System.Drawing.Point(89, 3);
-            this.EightButton.Name = "EightButton";
-            this.EightButton.Size = new System.Drawing.Size(80, 35);
-            this.EightButton.TabIndex = 1;
-            this.EightButton.Text = "8";
-            this.EightButton.UseVisualStyleBackColor = true;
-            // 
-            // NineButton
-            // 
-            this.NineButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NineButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.NineButton.Location = new System.Drawing.Point(175, 3);
-            this.NineButton.Name = "NineButton";
-            this.NineButton.Size = new System.Drawing.Size(82, 35);
-            this.NineButton.TabIndex = 2;
-            this.NineButton.Text = "9";
-            this.NineButton.UseVisualStyleBackColor = true;
-            // 
-            // FourButton
-            // 
-            this.FourButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FourButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FourButton.Location = new System.Drawing.Point(3, 44);
-            this.FourButton.Name = "FourButton";
-            this.FourButton.Size = new System.Drawing.Size(80, 35);
-            this.FourButton.TabIndex = 3;
-            this.FourButton.Text = "4";
-            this.FourButton.UseVisualStyleBackColor = true;
-            // 
-            // FiveButton
-            // 
-            this.FiveButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FiveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FiveButton.Location = new System.Drawing.Point(89, 44);
-            this.FiveButton.Name = "FiveButton";
-            this.FiveButton.Size = new System.Drawing.Size(80, 35);
-            this.FiveButton.TabIndex = 4;
-            this.FiveButton.Text = "5";
-            this.FiveButton.UseVisualStyleBackColor = true;
-            // 
-            // SixButton
-            // 
-            this.SixButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SixButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.SixButton.Location = new System.Drawing.Point(175, 44);
-            this.SixButton.Name = "SixButton";
-            this.SixButton.Size = new System.Drawing.Size(82, 35);
-            this.SixButton.TabIndex = 5;
-            this.SixButton.Text = "6";
-            this.SixButton.UseVisualStyleBackColor = true;
-            // 
-            // OneButton
-            // 
-            this.OneButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.OneButton.Location = new System.Drawing.Point(3, 85);
-            this.OneButton.Name = "OneButton";
-            this.OneButton.Size = new System.Drawing.Size(80, 35);
-            this.OneButton.TabIndex = 6;
-            this.OneButton.Text = "1";
-            this.OneButton.UseVisualStyleBackColor = true;
-            // 
-            // TwoButton
-            // 
-            this.TwoButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TwoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.TwoButton.Location = new System.Drawing.Point(89, 85);
-            this.TwoButton.Name = "TwoButton";
-            this.TwoButton.Size = new System.Drawing.Size(80, 35);
-            this.TwoButton.TabIndex = 7;
-            this.TwoButton.Text = "2";
-            this.TwoButton.UseVisualStyleBackColor = true;
-            // 
-            // ThreeButton
-            // 
-            this.ThreeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ThreeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.ThreeButton.Location = new System.Drawing.Point(175, 85);
-            this.ThreeButton.Name = "ThreeButton";
-            this.ThreeButton.Size = new System.Drawing.Size(82, 35);
-            this.ThreeButton.TabIndex = 8;
-            this.ThreeButton.Text = "3";
-            this.ThreeButton.UseVisualStyleBackColor = true;
-            // 
-            // DeleteButton
-            // 
-            this.DeleteButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.DeleteButton.Location = new System.Drawing.Point(3, 126);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(80, 38);
-            this.DeleteButton.TabIndex = 9;
-            this.DeleteButton.Text = "Del";
-            this.DeleteButton.UseVisualStyleBackColor = true;
-            this.DeleteButton.Click += new System.EventHandler(this.Button4_Click);
-            // 
-            // ZeroButton
-            // 
-            this.ZeroButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ZeroButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.ZeroButton.Location = new System.Drawing.Point(89, 126);
-            this.ZeroButton.Name = "ZeroButton";
-            this.ZeroButton.Size = new System.Drawing.Size(80, 38);
-            this.ZeroButton.TabIndex = 10;
-            this.ZeroButton.Text = "0";
-            this.ZeroButton.UseVisualStyleBackColor = true;
-            // 
             // PeriodButton
             // 
             this.PeriodButton.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -287,6 +167,140 @@
             this.PeriodButton.TabIndex = 11;
             this.PeriodButton.Text = ".";
             this.PeriodButton.UseVisualStyleBackColor = true;
+            this.PeriodButton.Click += new System.EventHandler(this.PeriodButton_Click);
+            // 
+            // ZeroButton
+            // 
+            this.ZeroButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ZeroButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ZeroButton.Location = new System.Drawing.Point(89, 126);
+            this.ZeroButton.Name = "ZeroButton";
+            this.ZeroButton.Size = new System.Drawing.Size(80, 38);
+            this.ZeroButton.TabIndex = 10;
+            this.ZeroButton.Text = "0";
+            this.ZeroButton.UseVisualStyleBackColor = true;
+            this.ZeroButton.Click += new System.EventHandler(this.ZeroButton_Click);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.DeleteButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.DeleteButton.Location = new System.Drawing.Point(3, 126);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(80, 38);
+            this.DeleteButton.TabIndex = 9;
+            this.DeleteButton.Text = "Del";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.Button4_Click);
+            // 
+            // ThreeButton
+            // 
+            this.ThreeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ThreeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ThreeButton.Location = new System.Drawing.Point(175, 85);
+            this.ThreeButton.Name = "ThreeButton";
+            this.ThreeButton.Size = new System.Drawing.Size(82, 35);
+            this.ThreeButton.TabIndex = 8;
+            this.ThreeButton.Text = "3";
+            this.ThreeButton.UseVisualStyleBackColor = true;
+            this.ThreeButton.Click += new System.EventHandler(this.ThreeButton_Click);
+            // 
+            // TwoButton
+            // 
+            this.TwoButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TwoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TwoButton.Location = new System.Drawing.Point(89, 85);
+            this.TwoButton.Name = "TwoButton";
+            this.TwoButton.Size = new System.Drawing.Size(80, 35);
+            this.TwoButton.TabIndex = 7;
+            this.TwoButton.Text = "2";
+            this.TwoButton.UseVisualStyleBackColor = true;
+            this.TwoButton.Click += new System.EventHandler(this.TwoButton_Click);
+            // 
+            // OneButton
+            // 
+            this.OneButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.OneButton.Location = new System.Drawing.Point(3, 85);
+            this.OneButton.Name = "OneButton";
+            this.OneButton.Size = new System.Drawing.Size(80, 35);
+            this.OneButton.TabIndex = 6;
+            this.OneButton.Text = "1";
+            this.OneButton.UseVisualStyleBackColor = true;
+            this.OneButton.Click += new System.EventHandler(this.OneButton_Click);
+            // 
+            // SixButton
+            // 
+            this.SixButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SixButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.SixButton.Location = new System.Drawing.Point(175, 44);
+            this.SixButton.Name = "SixButton";
+            this.SixButton.Size = new System.Drawing.Size(82, 35);
+            this.SixButton.TabIndex = 5;
+            this.SixButton.Text = "6";
+            this.SixButton.UseVisualStyleBackColor = true;
+            this.SixButton.Click += new System.EventHandler(this.SixButton_Click);
+            // 
+            // FiveButton
+            // 
+            this.FiveButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FiveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FiveButton.Location = new System.Drawing.Point(89, 44);
+            this.FiveButton.Name = "FiveButton";
+            this.FiveButton.Size = new System.Drawing.Size(80, 35);
+            this.FiveButton.TabIndex = 4;
+            this.FiveButton.Text = "5";
+            this.FiveButton.UseVisualStyleBackColor = true;
+            this.FiveButton.Click += new System.EventHandler(this.FiveButton_Click);
+            // 
+            // FourButton
+            // 
+            this.FourButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FourButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FourButton.Location = new System.Drawing.Point(3, 44);
+            this.FourButton.Name = "FourButton";
+            this.FourButton.Size = new System.Drawing.Size(80, 35);
+            this.FourButton.TabIndex = 3;
+            this.FourButton.Text = "4";
+            this.FourButton.UseVisualStyleBackColor = true;
+            this.FourButton.Click += new System.EventHandler(this.FourButton_Click);
+            // 
+            // NineButton
+            // 
+            this.NineButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NineButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.NineButton.Location = new System.Drawing.Point(175, 3);
+            this.NineButton.Name = "NineButton";
+            this.NineButton.Size = new System.Drawing.Size(82, 35);
+            this.NineButton.TabIndex = 2;
+            this.NineButton.Text = "9";
+            this.NineButton.UseVisualStyleBackColor = true;
+            this.NineButton.Click += new System.EventHandler(this.NineButton_Click);
+            // 
+            // EightButton
+            // 
+            this.EightButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.EightButton.Location = new System.Drawing.Point(89, 3);
+            this.EightButton.Name = "EightButton";
+            this.EightButton.Size = new System.Drawing.Size(80, 35);
+            this.EightButton.TabIndex = 1;
+            this.EightButton.Text = "8";
+            this.EightButton.UseVisualStyleBackColor = true;
+            this.EightButton.Click += new System.EventHandler(this.EightButton_Click);
+            // 
+            // SevenButton
+            // 
+            this.SevenButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SevenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.SevenButton.Location = new System.Drawing.Point(3, 3);
+            this.SevenButton.Name = "SevenButton";
+            this.SevenButton.Size = new System.Drawing.Size(80, 35);
+            this.SevenButton.TabIndex = 0;
+            this.SevenButton.Text = "7";
+            this.SevenButton.UseVisualStyleBackColor = true;
+            this.SevenButton.Click += new System.EventHandler(this.SevenButton_Click);
             // 
             // CalculateButton
             // 
@@ -298,11 +312,14 @@
             this.CalculateButton.TabIndex = 8;
             this.CalculateButton.Text = "Calculate";
             this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // BMIform
             // 
+            this.AcceptButton = this.CalculateButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.DeleteButton;
             this.ClientSize = new System.Drawing.Size(302, 433);
             this.Controls.Add(this.CalculateButton);
             this.Controls.Add(this.ButtonsPanel);
