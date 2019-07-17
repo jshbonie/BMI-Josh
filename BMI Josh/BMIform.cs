@@ -28,18 +28,11 @@ namespace BMI_Josh
         #endregion
         
 
-        
-
-        private void Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MyHeightLabel_Click(object sender, EventArgs e)
         {
 
         }
-
+        #region Calculate Button
         private void SevenButton_Click(object sender, EventArgs e)
         {
 
@@ -99,6 +92,11 @@ namespace BMI_Josh
         {
 
         }
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+#endregion
 
         private void MyHeightTextBox_TextChanged(object sender, EventArgs e)
         {

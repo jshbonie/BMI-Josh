@@ -192,7 +192,7 @@
             this.DeleteButton.TabIndex = 9;
             this.DeleteButton.Text = "Del";
             this.DeleteButton.UseVisualStyleBackColor = true;
-            this.DeleteButton.Click += new System.EventHandler(this.Button4_Click);
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // ThreeButton
             // 
