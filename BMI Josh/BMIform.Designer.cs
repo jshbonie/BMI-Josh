@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMIform));
             this.MyHeightLabel = new System.Windows.Forms.Label();
             this.MyHeightTextBox = new System.Windows.Forms.TextBox();
             this.MyWeightLabel = new System.Windows.Forms.Label();
@@ -49,13 +50,15 @@
             this.EightButton = new System.Windows.Forms.Button();
             this.SevenButton = new System.Windows.Forms.Button();
             this.CalculateButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ButtonsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MyHeightLabel
             // 
             this.MyHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.MyHeightLabel.Location = new System.Drawing.Point(12, 54);
+            this.MyHeightLabel.Location = new System.Drawing.Point(14, 75);
             this.MyHeightLabel.Name = "MyHeightLabel";
             this.MyHeightLabel.Size = new System.Drawing.Size(278, 28);
             this.MyHeightLabel.TabIndex = 0;
@@ -66,7 +69,7 @@
             // MyHeightTextBox
             // 
             this.MyHeightTextBox.AcceptsTab = true;
-            this.MyHeightTextBox.Location = new System.Drawing.Point(16, 85);
+            this.MyHeightTextBox.Location = new System.Drawing.Point(15, 106);
             this.MyHeightTextBox.Multiline = true;
             this.MyHeightTextBox.Name = "MyHeightTextBox";
             this.MyHeightTextBox.Size = new System.Drawing.Size(274, 22);
@@ -76,7 +79,7 @@
             // MyWeightLabel
             // 
             this.MyWeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.MyWeightLabel.Location = new System.Drawing.Point(12, 110);
+            this.MyWeightLabel.Location = new System.Drawing.Point(13, 131);
             this.MyWeightLabel.Name = "MyWeightLabel";
             this.MyWeightLabel.Size = new System.Drawing.Size(271, 28);
             this.MyWeightLabel.TabIndex = 2;
@@ -86,7 +89,7 @@
             // MyWeightTextBox
             // 
             this.MyWeightTextBox.AcceptsTab = true;
-            this.MyWeightTextBox.Location = new System.Drawing.Point(16, 141);
+            this.MyWeightTextBox.Location = new System.Drawing.Point(16, 162);
             this.MyWeightTextBox.Multiline = true;
             this.MyWeightTextBox.Name = "MyWeightTextBox";
             this.MyWeightTextBox.Size = new System.Drawing.Size(274, 22);
@@ -97,9 +100,9 @@
             // 
             this.ImperialRadioButton.AutoSize = true;
             this.ImperialRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.ImperialRadioButton.Location = new System.Drawing.Point(16, 17);
+            this.ImperialRadioButton.Location = new System.Drawing.Point(5, 17);
             this.ImperialRadioButton.Name = "ImperialRadioButton";
-            this.ImperialRadioButton.Size = new System.Drawing.Size(89, 24);
+            this.ImperialRadioButton.Size = new System.Drawing.Size(75, 21);
             this.ImperialRadioButton.TabIndex = 4;
             this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
@@ -110,9 +113,9 @@
             // 
             this.MetricToggleButton.AutoSize = true;
             this.MetricToggleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.MetricToggleButton.Location = new System.Drawing.Point(121, 17);
+            this.MetricToggleButton.Location = new System.Drawing.Point(77, 17);
             this.MetricToggleButton.Name = "MetricToggleButton";
-            this.MetricToggleButton.Size = new System.Drawing.Size(77, 24);
+            this.MetricToggleButton.Size = new System.Drawing.Size(64, 21);
             this.MetricToggleButton.TabIndex = 5;
             this.MetricToggleButton.TabStop = true;
             this.MetricToggleButton.Text = "Metric";
@@ -121,8 +124,8 @@
             // 
             // CalculationResultText
             // 
-            this.CalculationResultText.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.CalculationResultText.Location = new System.Drawing.Point(16, 184);
+            this.CalculationResultText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.CalculationResultText.Location = new System.Drawing.Point(16, 197);
             this.CalculationResultText.Name = "CalculationResultText";
             this.CalculationResultText.Size = new System.Drawing.Size(274, 24);
             this.CalculationResultText.TabIndex = 6;
@@ -314,13 +317,24 @@
             this.CalculateButton.UseVisualStyleBackColor = true;
             this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(147, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(153, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // BMIform
             // 
             this.AcceptButton = this.CalculateButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.DeleteButton;
-            this.ClientSize = new System.Drawing.Size(302, 433);
+            this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CalculateButton);
             this.Controls.Add(this.ButtonsPanel);
             this.Controls.Add(this.CalculationResultText);
@@ -340,6 +354,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI Calculator";
             this.ButtonsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,6 +383,7 @@
         private System.Windows.Forms.Button PeriodButton;
         private System.Windows.Forms.Button ZeroButton;
         private System.Windows.Forms.Button CalculateButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

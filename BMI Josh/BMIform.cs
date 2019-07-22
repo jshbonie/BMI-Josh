@@ -32,6 +32,7 @@ namespace BMI_Josh
         {
 
         }
+
         #region Calculate Button
         private void SevenButton_Click(object sender, EventArgs e)
         {
