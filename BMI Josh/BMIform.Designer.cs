@@ -78,6 +78,7 @@
             this.MyHeightTextBox.Name = "MyHeightTextBox";
             this.MyHeightTextBox.Size = new System.Drawing.Size(274, 22);
             this.MyHeightTextBox.TabIndex = 3;
+            this.MyHeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.MyHeightTextBox.Click += new System.EventHandler(this.MyHeightTextBox_Click);
             this.MyHeightTextBox.TextChanged += new System.EventHandler(this.MyHeightTextBox_TextChanged);
             // 
@@ -100,6 +101,7 @@
             this.MyWeightTextBox.Name = "MyWeightTextBox";
             this.MyWeightTextBox.Size = new System.Drawing.Size(274, 22);
             this.MyWeightTextBox.TabIndex = 4;
+            this.MyWeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.MyWeightTextBox.Click += new System.EventHandler(this.MyWeightTextBox_Click);
             this.MyWeightTextBox.TextChanged += new System.EventHandler(this.MyWeightTextBox_TextChanged);
             // 
