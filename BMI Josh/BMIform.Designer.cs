@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMIform));
             this.MyHeightLabel = new System.Windows.Forms.Label();
             this.MyHeightTextBox = new System.Windows.Forms.TextBox();
@@ -49,8 +50,11 @@
             this.NineButton = new System.Windows.Forms.Button();
             this.EightButton = new System.Windows.Forms.Button();
             this.SevenButton = new System.Windows.Forms.Button();
-            this.CalculateButton = new System.Windows.Forms.Button();
+            this.CalculateBMIButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ResetButton = new System.Windows.Forms.Button();
             this.ButtonsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +68,6 @@
             this.MyHeightLabel.TabIndex = 0;
             this.MyHeightLabel.Text = "My Height";
             this.MyHeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MyHeightLabel.Click += new System.EventHandler(this.MyHeightLabel_Click);
             // 
             // MyHeightTextBox
             // 
@@ -130,6 +133,7 @@
             this.CalculationResultText.Size = new System.Drawing.Size(274, 24);
             this.CalculationResultText.TabIndex = 6;
             this.CalculationResultText.Text = "Please enter your height and weight and press calculate";
+            this.CalculationResultText.Click += new System.EventHandler(this.CalculationResultText_Click);
             // 
             // ButtonsPanel
             // 
@@ -305,17 +309,17 @@
             this.SevenButton.UseVisualStyleBackColor = true;
             this.SevenButton.Click += new System.EventHandler(this.SevenButton_Click);
             // 
-            // CalculateButton
+            // CalculateBMIButton
             // 
-            this.CalculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.CalculateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CalculateButton.Location = new System.Drawing.Point(112, 394);
-            this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(80, 37);
-            this.CalculateButton.TabIndex = 8;
-            this.CalculateButton.Text = "Calculate";
-            this.CalculateButton.UseVisualStyleBackColor = true;
-            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
+            this.CalculateBMIButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.CalculateBMIButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CalculateBMIButton.Location = new System.Drawing.Point(204, 397);
+            this.CalculateBMIButton.Name = "CalculateBMIButton";
+            this.CalculateBMIButton.Size = new System.Drawing.Size(80, 37);
+            this.CalculateBMIButton.TabIndex = 8;
+            this.CalculateBMIButton.Text = "Calculate BMI";
+            this.CalculateBMIButton.UseVisualStyleBackColor = true;
+            this.CalculateBMIButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // pictureBox1
             // 
@@ -327,15 +331,37 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ResetButton.Location = new System.Drawing.Point(23, 398);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(80, 36);
+            this.ResetButton.TabIndex = 12;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            // 
             // BMIform
             // 
-            this.AcceptButton = this.CalculateButton;
+            this.AcceptButton = this.CalculateBMIButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.DeleteButton;
             this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.CalculateButton);
+            this.Controls.Add(this.CalculateBMIButton);
             this.Controls.Add(this.ButtonsPanel);
             this.Controls.Add(this.CalculationResultText);
             this.Controls.Add(this.MetricToggleButton);
@@ -382,8 +408,11 @@
         private System.Windows.Forms.Button SevenButton;
         private System.Windows.Forms.Button PeriodButton;
         private System.Windows.Forms.Button ZeroButton;
-        private System.Windows.Forms.Button CalculateButton;
+        private System.Windows.Forms.Button CalculateBMIButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.Button ResetButton;
     }
 }
 

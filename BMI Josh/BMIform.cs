@@ -27,12 +27,6 @@ namespace BMI_Josh
         }
         #endregion
         
-
-        private void MyHeightLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         #region Calculate Button
         private void SevenButton_Click(object sender, EventArgs e)
         {
@@ -88,7 +82,9 @@ namespace BMI_Josh
         {
 
         }
+        #endregion
 
+        #region Calculate and Delete Button
         private void CalculateButton_Click(object sender, EventArgs e)
         {
 
@@ -97,8 +93,9 @@ namespace BMI_Josh
         {
 
         }
-#endregion
+        #endregion
 
+        #region Input Forms
         private void MyHeightTextBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -108,7 +105,9 @@ namespace BMI_Josh
         {
 
         }
+        #endregion
 
+        #region radio buttons
         private void ImperialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -116,6 +115,23 @@ namespace BMI_Josh
 
         private void MetricToggleButton_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+        #endregion
+
+        #region ShowResultsBox
+        private void CalculationResultText_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            this.MyWeightTextBox.Text = string.Empty;
+            this.MyHeightTextBox.Text = string.Empty;
+            this.ImperialRadioButton.Checked = false;
+            this.MetricToggleButton.Checked = false;
 
         }
     }
