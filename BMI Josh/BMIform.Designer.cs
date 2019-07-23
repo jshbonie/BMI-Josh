@@ -72,11 +72,13 @@
             // MyHeightTextBox
             // 
             this.MyHeightTextBox.AcceptsTab = true;
+            this.MyHeightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MyHeightTextBox.Location = new System.Drawing.Point(15, 106);
             this.MyHeightTextBox.Multiline = true;
             this.MyHeightTextBox.Name = "MyHeightTextBox";
             this.MyHeightTextBox.Size = new System.Drawing.Size(274, 22);
-            this.MyHeightTextBox.TabIndex = 1;
+            this.MyHeightTextBox.TabIndex = 3;
+            this.MyHeightTextBox.Click += new System.EventHandler(this.MyHeightTextBox_Click);
             this.MyHeightTextBox.TextChanged += new System.EventHandler(this.MyHeightTextBox_TextChanged);
             // 
             // MyWeightLabel
@@ -92,11 +94,13 @@
             // MyWeightTextBox
             // 
             this.MyWeightTextBox.AcceptsTab = true;
+            this.MyWeightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MyWeightTextBox.Location = new System.Drawing.Point(16, 162);
             this.MyWeightTextBox.Multiline = true;
             this.MyWeightTextBox.Name = "MyWeightTextBox";
             this.MyWeightTextBox.Size = new System.Drawing.Size(274, 22);
-            this.MyWeightTextBox.TabIndex = 3;
+            this.MyWeightTextBox.TabIndex = 4;
+            this.MyWeightTextBox.Click += new System.EventHandler(this.MyWeightTextBox_Click);
             this.MyWeightTextBox.TextChanged += new System.EventHandler(this.MyWeightTextBox_TextChanged);
             // 
             // ImperialRadioButton
@@ -106,7 +110,7 @@
             this.ImperialRadioButton.Location = new System.Drawing.Point(5, 17);
             this.ImperialRadioButton.Name = "ImperialRadioButton";
             this.ImperialRadioButton.Size = new System.Drawing.Size(75, 21);
-            this.ImperialRadioButton.TabIndex = 4;
+            this.ImperialRadioButton.TabIndex = 1;
             this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
             this.ImperialRadioButton.UseVisualStyleBackColor = true;
@@ -119,7 +123,7 @@
             this.MetricToggleButton.Location = new System.Drawing.Point(77, 17);
             this.MetricToggleButton.Name = "MetricToggleButton";
             this.MetricToggleButton.Size = new System.Drawing.Size(64, 21);
-            this.MetricToggleButton.TabIndex = 5;
+            this.MetricToggleButton.TabIndex = 2;
             this.MetricToggleButton.TabStop = true;
             this.MetricToggleButton.Text = "Metric";
             this.MetricToggleButton.UseVisualStyleBackColor = true;
@@ -171,7 +175,8 @@
             this.PeriodButton.Location = new System.Drawing.Point(175, 126);
             this.PeriodButton.Name = "PeriodButton";
             this.PeriodButton.Size = new System.Drawing.Size(82, 38);
-            this.PeriodButton.TabIndex = 11;
+            this.PeriodButton.TabIndex = 16;
+            this.PeriodButton.Tag = ".";
             this.PeriodButton.Text = ".";
             this.PeriodButton.UseVisualStyleBackColor = true;
             this.PeriodButton.Click += new System.EventHandler(this.PeriodButton_Click);
@@ -183,7 +188,8 @@
             this.ZeroButton.Location = new System.Drawing.Point(89, 126);
             this.ZeroButton.Name = "ZeroButton";
             this.ZeroButton.Size = new System.Drawing.Size(80, 38);
-            this.ZeroButton.TabIndex = 10;
+            this.ZeroButton.TabIndex = 15;
+            this.ZeroButton.Tag = "0";
             this.ZeroButton.Text = "0";
             this.ZeroButton.UseVisualStyleBackColor = true;
             this.ZeroButton.Click += new System.EventHandler(this.ZeroButton_Click);
@@ -196,7 +202,8 @@
             this.DeleteButton.Location = new System.Drawing.Point(3, 126);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(80, 38);
-            this.DeleteButton.TabIndex = 9;
+            this.DeleteButton.TabIndex = 14;
+            this.DeleteButton.Tag = "Del";
             this.DeleteButton.Text = "Del";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -208,7 +215,8 @@
             this.ThreeButton.Location = new System.Drawing.Point(175, 85);
             this.ThreeButton.Name = "ThreeButton";
             this.ThreeButton.Size = new System.Drawing.Size(82, 35);
-            this.ThreeButton.TabIndex = 8;
+            this.ThreeButton.TabIndex = 13;
+            this.ThreeButton.Tag = "3";
             this.ThreeButton.Text = "3";
             this.ThreeButton.UseVisualStyleBackColor = true;
             this.ThreeButton.Click += new System.EventHandler(this.ThreeButton_Click);
@@ -220,7 +228,8 @@
             this.TwoButton.Location = new System.Drawing.Point(89, 85);
             this.TwoButton.Name = "TwoButton";
             this.TwoButton.Size = new System.Drawing.Size(80, 35);
-            this.TwoButton.TabIndex = 7;
+            this.TwoButton.TabIndex = 12;
+            this.TwoButton.Tag = "2";
             this.TwoButton.Text = "2";
             this.TwoButton.UseVisualStyleBackColor = true;
             this.TwoButton.Click += new System.EventHandler(this.TwoButton_Click);
@@ -232,7 +241,8 @@
             this.OneButton.Location = new System.Drawing.Point(3, 85);
             this.OneButton.Name = "OneButton";
             this.OneButton.Size = new System.Drawing.Size(80, 35);
-            this.OneButton.TabIndex = 6;
+            this.OneButton.TabIndex = 11;
+            this.OneButton.Tag = "1";
             this.OneButton.Text = "1";
             this.OneButton.UseVisualStyleBackColor = true;
             this.OneButton.Click += new System.EventHandler(this.OneButton_Click);
@@ -244,7 +254,8 @@
             this.SixButton.Location = new System.Drawing.Point(175, 44);
             this.SixButton.Name = "SixButton";
             this.SixButton.Size = new System.Drawing.Size(82, 35);
-            this.SixButton.TabIndex = 5;
+            this.SixButton.TabIndex = 10;
+            this.SixButton.Tag = "6";
             this.SixButton.Text = "6";
             this.SixButton.UseVisualStyleBackColor = true;
             this.SixButton.Click += new System.EventHandler(this.SixButton_Click);
@@ -256,7 +267,8 @@
             this.FiveButton.Location = new System.Drawing.Point(89, 44);
             this.FiveButton.Name = "FiveButton";
             this.FiveButton.Size = new System.Drawing.Size(80, 35);
-            this.FiveButton.TabIndex = 4;
+            this.FiveButton.TabIndex = 9;
+            this.FiveButton.Tag = "5";
             this.FiveButton.Text = "5";
             this.FiveButton.UseVisualStyleBackColor = true;
             this.FiveButton.Click += new System.EventHandler(this.FiveButton_Click);
@@ -268,7 +280,8 @@
             this.FourButton.Location = new System.Drawing.Point(3, 44);
             this.FourButton.Name = "FourButton";
             this.FourButton.Size = new System.Drawing.Size(80, 35);
-            this.FourButton.TabIndex = 3;
+            this.FourButton.TabIndex = 8;
+            this.FourButton.Tag = "4";
             this.FourButton.Text = "4";
             this.FourButton.UseVisualStyleBackColor = true;
             this.FourButton.Click += new System.EventHandler(this.FourButton_Click);
@@ -280,7 +293,8 @@
             this.NineButton.Location = new System.Drawing.Point(175, 3);
             this.NineButton.Name = "NineButton";
             this.NineButton.Size = new System.Drawing.Size(82, 35);
-            this.NineButton.TabIndex = 2;
+            this.NineButton.TabIndex = 7;
+            this.NineButton.Tag = "9";
             this.NineButton.Text = "9";
             this.NineButton.UseVisualStyleBackColor = true;
             this.NineButton.Click += new System.EventHandler(this.NineButton_Click);
@@ -292,7 +306,8 @@
             this.EightButton.Location = new System.Drawing.Point(89, 3);
             this.EightButton.Name = "EightButton";
             this.EightButton.Size = new System.Drawing.Size(80, 35);
-            this.EightButton.TabIndex = 1;
+            this.EightButton.TabIndex = 6;
+            this.EightButton.Tag = "8";
             this.EightButton.Text = "8";
             this.EightButton.UseVisualStyleBackColor = true;
             this.EightButton.Click += new System.EventHandler(this.EightButton_Click);
@@ -304,7 +319,8 @@
             this.SevenButton.Location = new System.Drawing.Point(3, 3);
             this.SevenButton.Name = "SevenButton";
             this.SevenButton.Size = new System.Drawing.Size(80, 35);
-            this.SevenButton.TabIndex = 0;
+            this.SevenButton.TabIndex = 5;
+            this.SevenButton.Tag = "7";
             this.SevenButton.Text = "7";
             this.SevenButton.UseVisualStyleBackColor = true;
             this.SevenButton.Click += new System.EventHandler(this.SevenButton_Click);
@@ -316,7 +332,7 @@
             this.CalculateBMIButton.Location = new System.Drawing.Point(204, 397);
             this.CalculateBMIButton.Name = "CalculateBMIButton";
             this.CalculateBMIButton.Size = new System.Drawing.Size(80, 37);
-            this.CalculateBMIButton.TabIndex = 8;
+            this.CalculateBMIButton.TabIndex = 18;
             this.CalculateBMIButton.Text = "Calculate BMI";
             this.CalculateBMIButton.UseVisualStyleBackColor = true;
             this.CalculateBMIButton.Click += new System.EventHandler(this.CalculateButton_Click);
@@ -347,7 +363,7 @@
             this.ResetButton.Location = new System.Drawing.Point(23, 398);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(80, 36);
-            this.ResetButton.TabIndex = 12;
+            this.ResetButton.TabIndex = 17;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = true;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
