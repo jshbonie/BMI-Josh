@@ -28,7 +28,9 @@ namespace BMI_Josh
         {
             InitializeComponent();
             ImperialRadioButton.Checked = true;
+            // Automatically sets selector in my height textbox
             this.ActiveControl = MyHeightTextBox;
+            // initializes focusedcontrol as my height textbox
             _focusedControl = this.MyHeightTextBox;
         }
         #endregion
@@ -137,24 +139,35 @@ namespace BMI_Josh
         }
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-
+            // fist if statement checks to see which textbox is active
             if (_focusedControl == this.MyHeightTextBox)
             {
+                // second if statement ensures delete doesnt delete what isnt there and crashed the app
                 if (this.MyHeightTextBox.Text.Length >= this.MyHeightTextBox.SelectionStart + 1)
                 {
+                    //selectionStart keeps track of where the cursor is
                     var selectionStart = this.MyHeightTextBox.SelectionStart;
+                    // Deletes number before cursor 
                     this.MyHeightTextBox.Text = this.MyHeightTextBox.Text.Remove(this.MyHeightTextBox.SelectionStart, 1);
+                    // keeps cursor in the correct position 
                     this.MyHeightTextBox.SelectionStart = selectionStart;
+                    // resets selectionStart
                     selectionStart = 0;
                 }
             }
+            // fist if statement checks to see which textbox is active
             else if (_focusedControl == this.MyWeightTextBox)
             {
+                // second if statement ensures delete doesnt delete what isnt there and crashed the app
                 if (this.MyWeightTextBox.Text.Length >= this.MyWeightTextBox.SelectionStart+ 1)
                 {
+                    //selectionStart keeps track of where the cursor is
                     var selectionStart = this.MyHeightTextBox.SelectionStart;
+                    // Deletes number before cursor 
                     this.MyWeightTextBox.Text = this.MyWeightTextBox.Text.Remove(this.MyWeightTextBox.SelectionStart, 1);
+                    // keeps cursor in the correct position
                     this.MyHeightTextBox.SelectionStart = selectionStart;
+                    // resets selectionStart
                     selectionStart = 0;
                 }
             }
@@ -167,10 +180,10 @@ namespace BMI_Josh
             
         }
 
-        //Sets _focusControl to current active textbox to be used in FocusedInputText()
         private void MyHeightTextBox_Click(object sender, EventArgs e)
         {
-                _focusedControl = (TextBox)sender;
+            //Sets _focusControl to current active textbox to be used in FocusedInputText()
+            _focusedControl = (TextBox)sender;
         }
         private void MyWeightTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -178,9 +191,10 @@ namespace BMI_Josh
             
         }
 
-        //Sets _focusControl to current active textbox to be used in FocusedInputText()
+        
         private void MyWeightTextBox_Click(object sender, EventArgs e)
         {
+            //Sets _focusControl to current active textbox to be used in FocusedInputText()
             _focusedControl = (TextBox)sender;
         }
 
@@ -238,18 +252,21 @@ namespace BMI_Josh
             // Check which text box is active and inserts the value of the number
             if (_focusedControl == this.MyHeightTextBox)
             {
-
+                //Uses SelectionStart to remember position of cursor
                 var selectionStart = this.MyHeightTextBox.SelectionStart;
+                // inputs selected value
                 this.MyHeightTextBox.Text = this.MyHeightTextBox.Text.Insert(this.MyHeightTextBox.SelectionStart, value);
+                // keeps cursor at correct position
                 this.MyHeightTextBox.SelectionStart = selectionStart + value.Length;
-                this.MyHeightTextBox.SelectionLength = 0;
 
             } else if(_focusedControl == this.MyWeightTextBox){
 
+                //Uses SelectionStart to remember position of cursor
                 var selectionStart = this.MyWeightTextBox.SelectionStart;
+                // inputs selected value
                 this.MyWeightTextBox.Text = this.MyWeightTextBox.Text.Insert(this.MyWeightTextBox.SelectionStart, value);
+                // keeps cursor at correct position
                 this.MyWeightTextBox.SelectionStart = selectionStart + value.Length;
-                this.MyWeightTextBox.SelectionLength = 0;
 
             }
 
