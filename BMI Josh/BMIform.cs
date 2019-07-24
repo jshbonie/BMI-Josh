@@ -142,8 +142,8 @@ namespace BMI_Josh
         {
             if (decimalExists != true)
             {
-                //Insert the value in the user input text boxes at the currently selected position
-                InsertTextValue(".");
+              InsertTextValue(".");
+                 
 
                 decimalExists = true;
             }
@@ -270,7 +270,7 @@ namespace BMI_Josh
             this.ImperialRadioButton.Checked = true;
             this.MetricToggleButton.Checked = false;
             outputString = "0";
-
+            decimalExists = false;
             MyHeightTextBox.Text = "0";
             MyWeightTextBox.Text = "0";
         }
@@ -357,6 +357,7 @@ namespace BMI_Josh
 
             if (MetricToggleButton.Checked)
             {
+
                // bmiTotal = userInput_Weight / (userInput_Height * userInput_Height);
             }
         }
