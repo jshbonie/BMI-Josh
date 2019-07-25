@@ -140,12 +140,54 @@ namespace BMI_Josh
 
         private void PeriodButton_Click(object sender, EventArgs e)
         {
-            if (decimalExists != true)
+            // checks to see if cursor is in right position
+            if (_focusedControl == MyHeightTextBox)
             {
-              InsertTextValue(".");
-                 
+                // checks to see if textbox starts with 0
+                if (MyHeightTextBox.Text.StartsWith("0"))
+                {
+                    // checks to see if decimal exists and if before checks to see if 0 exists, if 0 exists it'll replace the current 0 with a "0."
+                    if (decimalExists != true)
+                    {
+                        InsertTextValue("0.");
 
-                decimalExists = true;
+
+                        decimalExists = true;
+                    }
+                }
+                else
+                {
+                    // if 0 isn't in front, it'll add a "."
+                    if(decimalExists != true)
+                    {
+                        InsertTextValue(".");
+
+
+                        decimalExists = true;
+                    }
+                }
+            }else if(_focusedControl == MyWeightTextBox)
+            {
+                if (MyWeightTextBox.Text.StartsWith("0"))
+                {
+                    if (decimalExists != true)
+                    {
+                        InsertTextValue("0.");
+
+
+                        decimalExists = true;
+                    }
+                }
+                else
+                {
+                    if (decimalExists != true)
+                    {
+                        InsertTextValue(".");
+
+
+                        decimalExists = true;
+                    }
+                }
             }
             //Focus on the user input text
             FocusInputText();
@@ -160,7 +202,7 @@ namespace BMI_Josh
         /// <param name="e"></param>
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-
+            CalculateBMI();
         }
 
         /// <summary>
@@ -273,6 +315,7 @@ namespace BMI_Josh
             decimalExists = false;
             MyHeightTextBox.Text = "0";
             MyWeightTextBox.Text = "0";
+            CalculationResultText.Text = "Please enter your height and weight and press calculate bmi";
         }
         #endregion
 
@@ -299,7 +342,7 @@ namespace BMI_Josh
             // Check which text box is active and inserts the value of the number
             if (_focusedControl == this.MyHeightTextBox)
             {
-                if (MyHeightTextBox.Text.StartsWith("0"))
+                if (MyHeightTextBox.Text.StartsWith("0") && decimalExists == false)
                 {
                     var selectionStart = this.MyHeightTextBox.SelectionStart;
                     // inputs selected value
@@ -320,7 +363,7 @@ namespace BMI_Josh
                     outputString = " ";
                 }
             } else if(_focusedControl == this.MyWeightTextBox){
-                if (MyWeightTextBox.Text.StartsWith("0"))
+                if (MyWeightTextBox.Text.StartsWith("0") && decimalExists == false)
                 {
                 
                     //Uses SelectionStart to remember position of cursor
@@ -346,19 +389,30 @@ namespace BMI_Josh
             
         }
 
-        private void CalculateBMIMetric()
+        /// <summary>
+        /// Gets the user height and weight, checks if imperial or metric button is checke and does correct calculation to output the BMI of user
+        /// </summary>
+        private void CalculateBMI()
         {
             //Assigns user input from the height box to this variable
-            var userInput_Height = this.MyHeightTextBox.Text;
+            var userInput_Height = float.Parse(this.MyHeightTextBox.Text);
             //Assigns user input from the weight box to this variable
-            var userInput_Weight = this.MyWeightTextBox.Text;
+            var userInput_Weight = float.Parse(this.MyWeightTextBox.Text);
 
             float bmiTotal = 0;
 
+            //Checks which radio button is checked, imperial/metric
             if (MetricToggleButton.Checked)
             {
+                //Formula for metric BMI
+            bmiTotal = userInput_Weight / (userInput_Height * userInput_Height);
+                //Changes the results textbox to show BMI of user
+                CalculationResultText.Text = Convert.ToString(bmiTotal);
 
-               // bmiTotal = userInput_Weight / (userInput_Height * userInput_Height);
+            }else if (ImperialRadioButton.Checked)
+            {
+                bmiTotal = (userInput_Weight * 703) / (userInput_Height * userInput_Height);
+                CalculationResultText.Text = Convert.ToString(bmiTotal);
             }
         }
 
