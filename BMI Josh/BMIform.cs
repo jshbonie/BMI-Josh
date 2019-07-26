@@ -5,6 +5,8 @@ namespace BMI_Josh
 {
     /// <summary>
     /// BMI Calculator
+    /// Joshua Bonie
+    /// 301009614
     /// </summary>
     public partial class BMIform : Form
     {
